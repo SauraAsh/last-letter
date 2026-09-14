@@ -1,25 +1,39 @@
-# last-letter (WhatsApp Bot & Scrabble)
+# 🎮 Last Letter (WhatsApp Bot & Scrabble)
 
-Proyek ini adalah bot WhatsApp interaktif yang memungkinkan pengguna untuk bermain permainan kata "Last Letter" (sambung kata) dan juga terintegrasi dengan logika permainan Scrabble.
+> Bot WhatsApp interaktif untuk bermain game **Last Letter** (sambung kata) dengan sistem validasi kata otomatis menggunakan kamus Scrabble.
 
-## Struktur Proyek
+---
 
-- `whatsapp-bot/`: Berisi source code untuk bot WhatsApp yang dibangun menggunakan Node.js dan kerangka kerja Next.js.
-- `Scrabble/`: Berisi logika permainan Scrabble dan daftar kata pendukung yang digunakan sebagai referensi validasi kata oleh bot.
+## 📌 Deskripsi Game
+**Last Letter** adalah permainan sambung kata di mana setiap pemain harus membalas kata baru yang huruf awalnya merupakan huruf terakhir dari kata yang dikirimkan sebelumnya. Bot ini secara otomatis memvalidasi apakah kata yang dikirimkan pemain benar dan terdaftar dalam kamus.
 
-## Kredit dan Atribusi (Credits)
+## ✨ Fitur Utama
+- **Permainan Sambung Kata Interaktif:** Pemain bermain langsung di ruang percakapan WhatsApp.
+- **Validasi Otomatis:** Memeriksa kesesuaian huruf awal dan keabsahan kata berdasarkan kamus.
+- **Integrasi Scrabble:** Menggunakan basis data kata Scrabble untuk menentukan validitas kata.
 
-Sebagian file dan logika yang berada di dalam folder `Scrabble/` (terutama daftar kata) tidak dibuat dari awal, melainkan merujuk pada repository sumber terbuka (open-source) milik orang lain. 
+## 📁 Struktur Folder
+- `whatsapp-bot/` : Berisi *source code* bot WhatsApp yang dibangun menggunakan Node.js dan Next.js.
+- `Scrabble/` : Berisi daftar kata pendukung (`sowpods.txt`) dan modul pendukung untuk logika permainan.
 
-Kredit diberikan kepada:
-- **Pembuat Asli:** [jesstess](https://github.com/jesstess)
-- **Repository Sumber:** [jesstess/Scrabble](https://github.com/jesstess/Scrabble)
-- **File Spesifik:** Daftar kata yang digunakan berasal dari [sowpods.txt](https://github.com/jesstess/Scrabble/blob/master/scrabble/sowpods.txt).
+## 🚀 Cara Menjalankan
+1. Masuk ke direktori bot:
+   ```bash
+   cd whatsapp-bot
+   ```
+2. Instal semua dependensi:
+   ```bash
+   npm install
+   ```
+3. Jalankan server lokal:
+   ```bash
+   npm run dev
+   ```
 
-Terima kasih kepada pembuat asli atas kontribusi sumber terbuka ini yang sangat membantu jalannya permainan pada bot ini.
+## 📜 Kredit & Lisensi
+Daftar kata (`sowpods.txt`) yang digunakan pada proyek ini bersumber dari repositori terbuka:
+- **Kredit Pembuat:** [jesstess](https://github.com/jesstess)
+- **Repositori Asal:** [jesstess/Scrabble](https://github.com/jesstess/Scrabble)
+- **Sumber File:** [sowpods.txt](https://github.com/jesstess/Scrabble/blob/master/scrabble/sowpods.txt)
 
-## Cara Menjalankan
-
-1. Buka terminal dan masuk ke folder `whatsapp-bot`.
-2. Jalankan perintah `npm install` untuk menginstal seluruh pustaka (dependencies) yang dibutuhkan.
-3. Jalankan `npm run dev` untuk memulai server lokal bot.
+Terima kasih kepada pembuat asli atas kontribusinya pada repositori sumber terbuka.
